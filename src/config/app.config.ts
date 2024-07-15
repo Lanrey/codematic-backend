@@ -77,6 +77,11 @@ const appConfig = {
       host: process.env.ACCOUNT_SERVICE_HOST,
     },
   },
+  azureService: {
+    logs: {
+        connectionString: String(process.env.APPLICATION_INSIGHTS)
+    }
+  }
 };
 
 export default appConfig;
