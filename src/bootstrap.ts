@@ -1,4 +1,4 @@
-import cors from 'fastify-cors';
+import cors from '@fastify/cors';
 //import { container } from 'tsyringe';
 import Validator from 'validatorjs';
 //import EventSubscriber from './v1/modules/event/services/event-subscriber';

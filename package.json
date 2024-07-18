@@ -21,7 +21,6 @@
     "lint:fix": "eslint . --ext .ts --fix"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.10",
     "@typescript-eslint/eslint-plugin": "^7.16.0",
@@ -46,6 +45,7 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "@fastify/cors": "^9.0.1",
     "applicationinsights": "^3.2.1",
     "axios": "^1.7.2",
     "bcrypt": "^5.1.1",
@@ -54,7 +54,6 @@
     "dotenv": "^16.4.5",
     "event-dispatch": "^0.4.1",
     "fastify": "^4.28.1",
-    "fastify-cors": "^6.1.0",
     "fastify-plugin": "^4.5.1",
     "http-status": "^1.7.4",
     "ioredis": "^5.4.1",
