@@ -1,4 +1,4 @@
-import * as appInsights from 'applicationinsights';
+
 
 import fastify, { FastifyInstance } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
@@ -7,7 +7,6 @@ import bootstrapApp from './bootstrap';
 //import RouteVersion from '@config/route.config';
 import appRoute from './v1/modules/app/app.route';
 import healthRoute from './v1/modules/health/health.route';
-import appConfig from './config/app.config';
 //import onboardingRoute from './v1/modules/onboarding/onboarding.route';
 //import userRoute from './v1/modules/user/routes/user.route';
 //import authRoute from './v1/modules/auth/routes/auth.route';
@@ -20,8 +19,6 @@ import appConfig from './config/app.config';
 import { RedisClient } from '@shared/redis-client/redis-client';
 //import adminRoute from './v1/modules/admin/routes/user.route';
 //import { UserTierUpgradeTierJobProcessor } from './v1/modules/customer/services/handle-user-tier-upgrade-job.service';
-
-appInsights.setup(appConfig.azureService.logs.connectionString).setDistributedTracingMode(appInsights.DistributedTracingModes.AI_AND_W3C).start()
 
 
 class App {

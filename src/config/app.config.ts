@@ -21,7 +21,7 @@ const appConfig = {
   bullMq: {
     upgradeTierQueueName: String(process.env.UPGRADE_TIER_QUEUE),
     upgradeTierDelay: Number(process.env.UPGRADE_TIER_JOB_DELAY),
-    upgrateTierJobName: String(process.env.UPGRADE_TIER_JOB_NAME)
+    upgrateTierJobName: String(process.env.UPGRADE_TIER_JOB_NAME),
   },
   firebase: {
     config: {
@@ -79,9 +79,9 @@ const appConfig = {
   },
   azureService: {
     logs: {
-        connectionString: String(process.env.APPLICATION_INSIGHTS)
-    }
-  }
+      connectionString: String(process.env.APPLICATION_INSIGHTS),
+    },
+  },
 };
 
 export default appConfig;

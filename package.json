@@ -45,6 +45,7 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "@0dep/pino-applicationinsights": "^1.0.0",
     "@fastify/cors": "^9.0.1",
     "applicationinsights": "^3.2.1",
     "axios": "^1.7.2",
