@@ -81,6 +81,9 @@ const appConfig = {
     logs: {
       connectionString: String(process.env.APPLICATION_INSIGHTS),
     },
+    pubSub: {
+      connectionString: String(process.env.PUB_SUB),
+    },
   },
 };
 

@@ -1,7 +1,8 @@
 import cors from '@fastify/cors';
-//import { container } from 'tsyringe';
+import { container } from 'tsyringe';
 import Validator from 'validatorjs';
 //import EventSubscriber from './v1/modules/event/services/event-subscriber';
+import EventSubscriber from './v1/modules/common/event/services/event-subsriber';
 //import RetryAccountCreationService from './v1/modules/account/services/retry-account-creation.service';
 import initializeDatabase from './database';
 import loggerPlugin from '@shared/utils/logger/plugin';
@@ -88,7 +89,7 @@ function initializeJobProccessor() {
 }
 
 function subscribeToExternalEvents() {
- // container.resolve(EventSubscriber).subscribeToTopics();
+  container.resolve(EventSubscriber).subscribeToTopics();
 }
 
 function setErrorHandler(fastify) {

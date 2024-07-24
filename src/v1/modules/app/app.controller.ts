@@ -4,10 +4,13 @@ import AppService from './app.service';
 
 @injectable()
 class AppController {
-  constructor(private appService: AppService) {}
+  constructor(
+    private readonly appService: AppService,
+    // private readonly publishEvent: PublishEvent,
+  ) {}
 
   getHello = async (req: FastifyRequest, res: FastifyReply) => {
-    res.send(this.appService.getHello());
+    res.send(await this.appService.getHello());
   };
 }
 
