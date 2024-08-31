@@ -1,10 +1,11 @@
 import pino from 'pino';
 import * as appInsights from 'applicationinsights';
 import appConfig from '../../../config/app.config';
-import compose from '@0dep/pino-applicationinsights';
+//import compose from '@0dep/pino-applicationinsights';
 
 appInsights.setup(appConfig.azureService.logs.connectionString).start();
 
+/*
 const transport = compose({
   track(chunk) {
     const { time, severity, msg: message, properties, exception } = chunk;
@@ -14,6 +15,7 @@ const transport = compose({
   connectionString: appConfig.azureService.logs.connectionString,
   config: { maxBatchSize: 1 },
 });
+*/
 
 const logger = pino(
   {
@@ -63,7 +65,7 @@ const logger = pino(
       'req.body.passcode',
     ],
   },
-  transport,
+ // transport,
 );
 
 export default logger;

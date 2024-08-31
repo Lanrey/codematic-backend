@@ -30,9 +30,12 @@ export class RedisClient {
       password: appConfig.redis.password,
       showFriendlyErrorStack: true,
       retryStrategy,
-      enableOfflineQueue: false,
-      maxRetriesPerRequest: null,
+      enableOfflineQueue: true, // Changed to true
+      maxRetriesPerRequest: 3,   // Limited to 3 retries per request
       db: 0,
+      connectTimeout: 10000,     // 10 seconds
+      commandTimeout: 50000,      // 5 seconds
+      lazyConnect: true, 
     });
 
     redisClient.on('error', (err) => {

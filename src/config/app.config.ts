@@ -85,6 +85,12 @@ const appConfig = {
       connectionString: String(process.env.PUB_SUB),
     },
   },
+  youtube: {
+    apiKey: {
+      key: String(process.env.YOUTUBE_API_KEY),
+      baseUrl: String(process.env.YOUTUBE_BASE_URL),
+    },
+  },
 };
 
 export default appConfig;

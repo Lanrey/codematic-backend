@@ -1,4 +1,3 @@
-
 import { ServiceBusClient, ServiceBusMessage } from '@azure/service-bus';
 import { injectable } from 'tsyringe';
 import { Event } from '../types/event.type';
@@ -7,7 +6,6 @@ import appConfig from '@config/app.config';
 
 @injectable()
 class PublishEvent {
-
   private pubSubClient: ServiceBusClient;
 
   constructor() {

@@ -1,14 +1,14 @@
 import logger from '@shared/utils/logger';
-import PublishEvent from '../common/event/services/publish-event-service';
-import { v4 as uuidv4 } from 'uuid';
 import { injectable } from 'tsyringe';
 
 @injectable()
 class AppService {
-  constructor(private readonly publishEvent: PublishEvent) {}
+  constructor() {}
 
   async getHello() {
     logger.info('Sending message to APP Insights');
+
+    /*
 
     await this.publishEvent.execute({
       eventId: uuidv4(),
@@ -17,8 +17,10 @@ class AppService {
         message: 'Testing for chisels',
       },
     });
+
+    */
     return {
-      service: '9jaPay base template',
+      service: 'Codematic Video Commenter',
       version: '1.0.0',
     };
   }
