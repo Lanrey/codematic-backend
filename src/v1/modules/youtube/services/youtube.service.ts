@@ -117,7 +117,7 @@ class YoutubeService {
     const videoDetailsExist = await this.videoRepo.selectVideo(videoId);
 
     if (!videoDetailsExist) {
-      throw new DatabaseError('Save Video Details First');
+      throw new DatabaseError('Invalid videoId, save video details or put the valid videoId');
     }
 
     try {
