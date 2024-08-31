@@ -185,6 +185,11 @@ Fetches comments for a specific YouTube video, with pagination support.
   - `404 Not Found`: If no comments are found.
   - `500 Internal Server Error`: For unexpected errors.
 
+## NOTE!!!!!!!
+
+Due to the deployment server used free service (on render), you need to make sure the server isn't inactive, you can do that by pinging the backend server (https://codematic-backend.onrender.com/), till you get a response, this should take about a minute to respond
+
+
 ## Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss your changes.
