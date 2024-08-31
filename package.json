@@ -6,7 +6,7 @@
   "author": "Olusola Akinsulere",
   "scripts": {
     "start:dev": "nodemon",
-    "start": "npm run build && node dist/server.js",
+    "start": "node dist/server.js",
     "build": "tsc",
     "postbuild": "copyfiles -u 1 \"src/**/*.proto\" dist",
     "test": "jest --runInBand --passWithNoTests --detectOpenHandles --forceExit",
