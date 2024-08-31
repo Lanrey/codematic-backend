@@ -53,7 +53,7 @@ The application follows a layered architecture to separate concerns and make the
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Lanrey/youtube-comments-viewer-backend.git
+   git clone https://github.com/Lanrey/codematic-backend.git
    cd youtube-comments-viewer-backend
    ```
 
