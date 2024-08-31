@@ -11,6 +11,7 @@ import { AxiosInstance } from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import PublishEvent from '../../common/event/services/publish-event-service';
 import DatabaseError from '@shared/error/database.error';
+import AppError from '@shared/error/app.error';
 
 @injectable()
 class YoutubeService {
@@ -64,7 +65,12 @@ class YoutubeService {
         `videos?id=${videoId}&part=snippet,statistics&key=${this.youtubeKey}`,
       );
 
+
       const videoData = response.items[0];
+
+      if (!videoData) {
+        throw new AppError(400, 'Invalid Video Id');
+      }
 
       const videoDetails = {
         videoId: videoData.id,
@@ -81,9 +87,9 @@ class YoutubeService {
       logger.info('Video details saved to the database and cached.');
 
       return videoDetails;
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
-      throw error;
+      throw new AppError(400, error);
     }
   }
 
